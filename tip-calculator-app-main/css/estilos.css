@@ -1,0 +1,231 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Dark grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (form inputs): 24px
+
+### Font
+
+- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+- Weights: 400, 500, 700
+
+*/
+html {
+    box-sizing: border-box;
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  } 
+.no-margin-b{
+    margin-bottom: 0;
+}
+.no-margin{
+    margin: 0;
+}
+.no-margin-t{
+    margin-top: 0;
+}
+.no-padding{
+    padding: 0 !important;
+}
+.btn{
+    padding: 10px 40px;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    text-transform: uppercase;
+}
+body{
+    background-color: hsl(185, 41%, 84%);
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+}
+.contenedor{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.logo{
+    text-align: center;
+    margin: 35px 0;
+}
+@media only screen and (min-width:768px){
+    .contenedor{
+      width: 70%;
+    }
+    .logo{
+     
+        margin: 90px 0;
+    }
+  }
+  @media only screen and (min-width:980px){
+    .contenedor{
+      width: 50%;
+    }
+    .logo{
+        
+        margin: 90px 0;
+    }
+  }
+
+.seccion-main{
+    background-color: white;
+    height: auto;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 30px;
+
+}
+.sec-montos{
+    background-color: white;
+}
+.sec-result{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 30px;
+}
+.sec-result-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec-result-total p{
+    color: white;
+}
+.sec-result-total p span{
+    color: hsl(185, 41%, 84%);
+    font-size: 12px;
+} 
+.totales{
+    font-size: 36px;
+    color: #07D5B4;
+    font-weight: 700;
+}
+@media only screen and (min-width:768px){
+    .seccion-main{
+        background-color: white;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 30px;
+       
+    }
+    .sec-result{
+        margin-top: 0;
+    }
+
+  }
+
+input.input{
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    height: 35px;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0 20px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 16px;
+    color: hsl(183, 100%, 15%);
+}
+.sec-bill-input{
+    position: relative;
+}
+.sec-bill-input img{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+/*Seccion de tips*/
+.title{
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+}
+.sec-tip{
+    margin-top: 30px;
+}
+.sec-tip .tips {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 10px;
+}
+.tips .tip{
+    background-color: hsl(183, 100%, 15%);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.custom{
+    background-color: hsl(189, 41%, 97%) !important;
+    color: hsl(186, 14%, 43%) !important;
+}
+
+
+/*Seccion de personas*/
+.sec-personas-input{
+    position: relative;
+}
+.sec-personas-input img{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+/*boton reset*/
+.sec-result-btn .btn{
+    background-color: hsl(186, 14%, 43%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    margin-top: 70px;
+    cursor:no-drop;
+}
+.bnt-active{
+    background-color: #07D5B4 !important;
+    color: hsl(183, 100%, 15%) !important;
+    cursor: pointer !important;
+}
+.active{
+    background-color: #07D5B4 !important;
+    color: hsl(183, 100%, 15%) !important;
+}
+.field-incorrect{
+    outline: 1px solid red !important;
+}
+
+.error{
+    font-size: 10px;
+    color: red;
+    float: right;
+    margin-top: 5px;
+    display: none;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <!--Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
+    <div class="logo">
+      <img src="/images/logo.svg" alt="">
+    </div>
+    <div class="contenedor">
+      <div class="seccion-main">
+        <div class="sec-montos">
+          <div class="sec-bill">
+            <label for="bill" class="title">Bill <span class="error" id="errorBills">Ingresa los bills</span></label>
+            <div class="sec-bill-input">
+              <img src="/images/icon-dollar.svg" alt="">
+              <input type="number" class="input" id="bills" placeholder="0" style="text-align: right;">
+            </div>
+            <div class="sec-tip">
+              <p class="title">Select Tip %</p>
+              <div class="tips">
+                <div id="tip5" class="tip" data-value="5">
+                  5%
+                </div>
+                <div id="tip10" class="tip" data-value="10">
+                  10%
+                </div>
+                <div id="tip15" class="tip" data-value="15">
+                  15%
+                </div>
+                <div id="tip25" class="tip" data-value="25">
+                  25%
+                </div>
+                <div id="tip50" class="tip" data-value="50">
+                  50%
+                </div>
+                <div id="custom" class="tip no-padding">
+                  <input type="number" id="tipcustom" class="input custom no-padding" placeholder="Custom" style="text-align: center;height: 100%;">
+                </div>
+    
+              </div> <!--Tips-->
+            </div>  <!--Seccion tip-->
+            <div class="sec-personas">
+              <p class="title no-margin-b">Number of People <span class="error" id="errorPersons">No puede ser 0</span></p>
+              <div class="sec-personas-input">
+                <img src="/images/icon-person.svg" alt="">
+                <input type="number" class="input" id="persons" placeholder="0" style="text-align: right;">
+              </div>
+            </div>
+          </div> <!--Seccion billetes-->
+        </div>                          <!--Seccion montos-->
+        <div class="sec-result">
+          <div class="sec-result-total">
+            <p> Tip Amount<br>
+              <span>/ person</span></p>
+            <span class="totales">$<span id="montoTipXpersona">0.00</span></span>
+          </div>
+          <div class="sec-result-total">
+            <p> Total<br>
+              <span>/ person</span></p>
+           <span class="totales">$<span id="montoTotal">0.00</span></span>
+          </div>
+          <div class="sec-result-btn">
+            <button class="btn" id="reset" onclick="reset();">reset</button>
+          </div>
+        </div>                          <!--Seccion result-->
+      </div>
+      <!--Seccion main-->
+    </div> <!--Contenedor-->
+
+  <script src="js/calcular.js"></script>
+</body>
+</html>
